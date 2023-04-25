@@ -1,0 +1,40 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+li{
+    float: left;
+}
+li p{
+    display: block;
+    color: wheat;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+
+.active{
+    background-color: crimson;
+}
+li a{
+    display: block;
+    color: wheat;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: #111;
+}
+.odjava{
+    float: right;
+    text-align: center;
+}

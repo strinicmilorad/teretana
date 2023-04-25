@@ -1,0 +1,143 @@
+
+/* stil za container classu u kojoj nam se nalaze inputi */
+
+html,body{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: wheat;
+}
+
+
+.container{
+
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    background-image: url("../Slike/Book1.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+input{
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 10px 5px;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255,255);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition:all 0.3s;
+}
+
+input:hover{
+
+    background-color: crimson;
+    color: white;
+
+}
+input:focus{
+    background-color: crimson;
+    color: white;
+}
+
+::placeholder{
+    color: black;
+    opacity: 0.9;
+    font-style: italic;
+
+}
+::placeholder:focus{
+    color: white;
+}
+::placeholder:hover{
+    color: white;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+
+
+
+
+/* stil za Buttone */
+
+.button{
+
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 6px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    transition-duration: 0.4s;
+
+}
+
+.button:hover {
+
+    background-color: crimson;
+    color: white;
+
+}
+
+
+/*Stil za loader*/
+
+#loader{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid crimson;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+/*Pravimo animaciju koja okrece nas krug*/
+
+@-webkit-keyframes spin {
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+
+#container{
+    display: none;
+
+}
+
+
+
+
+

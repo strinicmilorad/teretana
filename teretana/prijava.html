@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prijava</title>
+
+     <link rel="stylesheet" href="CSS/prijava.css">
+     <link rel="stylesheet" href="CSS/PopUp.css">
+
+</head>
+<body onload="myFunction()">
+
+<script src="JavaScript/PopUp.js"></script>
+<script src="JavaScript/Loader.js"></script>
+
+<div id = "loader"></div>
+
+<div class="container" id="container">
+<form action="prijava.php" method="POST">
+    <center><input class = "c_ime" type="text" name="c_ime" placeholder="Clansko ime"></center>
+    <BR>
+    <center><input class ="c_sifra" type="password" name="c_sifra" placeholder="Sifra"></center>
+    <BR>
+    <center><button type="submit" name="Dalje" value="Prijavi se" class="button" >PRIJAVI SE</button></center>
+</form>
+<BR>
+
+
+    <center><button type="submit" name="napravinalog" value="Napravi nalog" class="button" id="myBtn">NAPRAVI NALOG</button></center>
+
+</div>
+
+
+
+<div id="myModal" class="modal">
+
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <center><h2>Napravite Vas Nalog</h2></center>
+        </div>
+        <div class="modal-body">
+
+            <?php
+            include 'novnalog.php';
+            ?>
+
+            <form action="novnalog.php" method="POST">
+                <center><font size ="4">Unesite zeljeno clansko ime</font></center>
+                <center><input type="text" name="c_ime" placeholder="Clansko ime" class="inputPopUp"></center>
+                <BR>
+                <center><font size ="4">Unesite zeljenu sifru </font><BR></center>
+                <center><input type="password" name="c_sifra1" placeholder="Zeljena sifra" class="inputPopUp"></center>
+                <BR>
+                <center><font size ="4">Ponovo unesite sifru </font><BR></center>
+                <center><input type="password" name="c_sifra2" placeholder="Ponovite vasu sifru" class="inputPopUp"></center>
+                <BR>
+                <center><font size ="4">Unesite vasu adresu </font><BR></center>
+                <center><input type="text" name="c_adresa" title="Molimo vas da unesete svoju adresu" placeholder="Unesite vasu adresu" class="inputPopUp"></center>
+                <BR>
+                <center><font size ="4">Unesite vas telefon </font><BR></center>
+                <center><input type="text" name="c_telefon" required pattern="[0-9]+" title="Molimo vas da unesete samo brojeve" placeholder="Unesite vas broj telefona" class="inputPopUp"></center>
+                <BR>
+                <center><button type="submit" name="Dalje" value="Napravi nalog">Napravi nalog</button></center>
+            </form>
+            <BR>
+            <form action="prijava.html" method="Post">
+                <center><button type="submit" name="nazad" value="Nazad">Nazad</button></center>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+            <center><h3>TERETANA</h3></center>
+        </div>
+    </div>
+
+</div>
+
+<script src="JavaScript/PopUp.js">
+
+</script>
+
+
+
+</body>
+</html>
